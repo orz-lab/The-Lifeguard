@@ -9,7 +9,7 @@
 
 [sub_resource type="Animation" id="Animation_dhgsv"]
 resource_name = "0"
-length = 17.0
+length = 23.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -101,10 +101,10 @@ tracks/7/path = NodePath("text/text:text")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 1, 3.86667, 7, 10.3, 13.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1, 3.86667, 7, 10.3, 13.5, 17.0667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["", "Chao em! Day la con robot Cuu Ho dung cong nghe AI.", "Robot nay dung cong nghe YOLO de nhan dien con chet duoi", "Robot nay duoc thay va hoc sinh Nguyen Hoang Lam", "Hay thi dau voi robot de coi ai cuu duoc nhieu nguoi hon nhe!!!", "Em co the di chuyen bang WASD hoac UP/DOWN/LEFT/RIGHT"]
+"values": ["", "Chao em! Day la con robot Cuu Ho dung cong nghe AI.", "Robot nay dung cong nghe YOLO de nhan dien chet duoi", "Robot nay duoc thay va hoc sinh Nguyen Hoang Lam", "Hay thi dau voi robot de coi ai cuu duoc nhieu nguoi hon nhe!!!", "Em co the di chuyen bang WASD hoac UP/DOWN/LEFT/RIGHT", "A quen, robot hay BI LOI va co the PHAT NO"]
 }
 tracks/8/type = "method"
 tracks/8/imported = false
