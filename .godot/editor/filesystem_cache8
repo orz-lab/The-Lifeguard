@@ -1,0 +1,26 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1733029466
+export_presets.cfg::TextFile::-1::1733029386::0::1::::<><>::
+icon.svg::CompressedTexture2D::8217965131637585225::1732985858::1733029466::1::::<><>::
+intro.gd::GDScript::-1::1733029268::0::1::::<>Node2D<>::
+intro.tscn::PackedScene::5792300514196053666::1733029362::0::1::::<><>::uid://wj7tdm6vnhqj::::res://Assets/pool.png<>res://intro.gd<>uid://bmfs6dgemlr32::::res://Assets/prof.png<>uid://bmmvke7iovbht::::res://Assets/the_lifeguard_main.png<>uid://qssjqntx88jk::::res://Assets/robot.png<>uid://cssqdihp0jakc::::res://target/target.tscn
+main.gd::GDScript::-1::1733024990::0::1::::<>Node2D<>::
+main.tscn::PackedScene::3062479910497904996::1733029361::0::1::::<><>::uid://wj7tdm6vnhqj::::res://Assets/pool.png<>res://main.gd<>uid://dtl0wbjoonkjt::::res://player/player.tscn<>uid://cklyfnqs6ynpf::::res://robot/robot.tscn
+::res://Assets/::1733026268
+Pixel Sans Serif.ttf::FontFile::6270336160543076447::1733026268::1733029466::1::::<><>::
+Pixelme.ttf::FontFile::3427131856982816319::1733021535::1733029466::1::::<><>::
+pool.png::CompressedTexture2D::1564711011220754525::1732989588::1733029466::1::::<><>::
+prof.png::CompressedTexture2D::3240157128637744303::1733026044::1733029466::1::::<><>::
+robot.png::CompressedTexture2D::1161290137147938520::1733024582::1733029466::1::::<><>::
+target.png::CompressedTexture2D::1545657736990585755::1733019953::1733029466::1::::<><>::
+the_lifeguard_main.png::CompressedTexture2D::3254752515095512461::1733025984::1733029466::1::::<><>::
+::res://player/::1733029362
+player.gd::GDScript::-1::1733025205::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::8517115514863562677::1733029362::0::1::::<><>::res://player/player.gd
+::res://robot/::1733029362
+robot.gd::GDScript::-1::1733025040::0::1::::<>Node2D<>::
+robot.tscn::PackedScene::5498904804237748519::1733029362::0::1::::<><>::res://robot/robot.gd<>uid://qssjqntx88jk::::res://Assets/robot.png
+::res://target/::1733029362
+detection.gd::GDScript::-1::1733021153::0::1::::<>Area2D<>::
+target.gd::GDScript::-1::1733023656::0::1::::<>Node2D<>::
+target.tscn::PackedScene::6074376613425565006::1733029362::0::1::::<><>::res://target/target.gd<>uid://way00hiohdqx::::res://Assets/target.png<>res://target/detection.gd

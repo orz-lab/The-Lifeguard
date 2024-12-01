@@ -1,0 +1,309 @@
+[gd_scene load_steps=12 format=3 uid="uid://cor3lw0iw7lkc"]
+
+[ext_resource type="Texture2D" uid="uid://wj7tdm6vnhqj" path="res://Assets/pool.png" id="1_1ftgp"]
+[ext_resource type="Script" path="res://intro.gd" id="1_ts0wa"]
+[ext_resource type="Texture2D" uid="uid://bmfs6dgemlr32" path="res://Assets/prof.png" id="2_bvurb"]
+[ext_resource type="Texture2D" uid="uid://bmmvke7iovbht" path="res://Assets/the_lifeguard_main.png" id="2_xq13q"]
+[ext_resource type="Texture2D" uid="uid://qssjqntx88jk" path="res://Assets/robot.png" id="4_xvjk1"]
+[ext_resource type="PackedScene" uid="uid://cssqdihp0jakc" path="res://target/target.tscn" id="5_vu1m0"]
+
+[sub_resource type="Animation" id="Animation_dhgsv"]
+resource_name = "0"
+length = 17.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Prof:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(53, 57)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Prof:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TheLifeguardMain:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(82, 59)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TheLifeguardMain:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Robot:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(28, 61), Vector2(28, 61), Vector2(28, 59), Vector2(28, 61), Vector2(28, 59), Vector2(28, 61), Vector2(28, 59), Vector2(28, 61)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Robot:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("text/name:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["", "Giao su: Nguyen Khac Duong"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("text/text:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1, 3.86667, 7, 10.3, 13.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["", "Chao em! Day la con robot Cuu Ho dung cong nghe AI.", "Robot nay dung cong nghe YOLO de nhan dien con chet duoi", "Robot nay duoc thay va hoc sinh Nguyen Hoang Lam", "Hay thi dau voi robot de coi ai cuu duoc nhieu nguoi hon nhe!!!", "Em co the di chuyen bang WASD hoac UP/DOWN/LEFT/RIGHT"]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(13.1333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"skip_intro"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_3ual0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Prof:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(53, 57)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Prof:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TheLifeguardMain:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(82, 59)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TheLifeguardMain:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Robot:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(28.5556, 61.8889)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Robot:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("text/name:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("text/text:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lilon"]
+_data = {
+"0": SubResource("Animation_dhgsv"),
+"RESET": SubResource("Animation_3ual0")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_xqefy"]
+font_size = 8
+font_color = Color(1, 0, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tt6on"]
+font_size = 8
+
+[node name="intro" type="Node2D"]
+scale = Vector2(9, 9)
+script = ExtResource("1_ts0wa")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(64, 36)
+
+[node name="pool" type="CharacterBody2D" parent="."]
+
+[node name="Pool" type="Sprite2D" parent="pool"]
+position = Vector2(64, 36)
+texture = ExtResource("1_1ftgp")
+
+[node name="Prof" type="Sprite2D" parent="."]
+position = Vector2(53, 57)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_bvurb")
+
+[node name="TheLifeguardMain" type="Sprite2D" parent="."]
+position = Vector2(82, 59)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_xq13q")
+hframes = 3
+vframes = 3
+
+[node name="Robot" type="Sprite2D" parent="."]
+position = Vector2(28.5556, 61.8889)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_xvjk1")
+hframes = 2
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lilon")
+}
+autoplay = "0"
+
+[node name="text" type="Node2D" parent="."]
+position = Vector2(101.222, 66.3333)
+scale = Vector2(0.5, 0.5)
+
+[node name="name" type="Label" parent="text"]
+offset_left = -192.889
+offset_top = -116.889
+offset_right = 29.1111
+offset_bottom = -100.889
+label_settings = SubResource("LabelSettings_xqefy")
+
+[node name="text" type="Label" parent="text"]
+offset_left = -192.889
+offset_top = -107.778
+offset_right = 15.1111
+offset_bottom = -91.7778
+label_settings = SubResource("LabelSettings_tt6on")
+
+[node name="Button" type="Button" parent="text"]
+offset_left = 2.66711
+offset_top = -9.99993
+offset_right = 48.6671
+offset_bottom = 6.00007
+theme_override_font_sizes/font_size = 8
+text = "skip intro"
+
+[node name="target" parent="." instance=ExtResource("5_vu1m0")]
+position = Vector2(24.8889, 32.8889)
+
+[node name="target2" parent="." instance=ExtResource("5_vu1m0")]
+position = Vector2(90.4445, 29.7778)
+
+[node name="target3" parent="." instance=ExtResource("5_vu1m0")]
+position = Vector2(63.6667, 40.6667)
+
+[connection signal="pressed" from="text/Button" to="." method="_on_button_pressed"]

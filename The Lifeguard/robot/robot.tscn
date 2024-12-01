@@ -1,0 +1,96 @@
+[gd_scene load_steps=9 format=3 uid="uid://cklyfnqs6ynpf"]
+
+[ext_resource type="Script" path="res://robot/robot.gd" id="1_7vriw"]
+[ext_resource type="Texture2D" uid="uid://qssjqntx88jk" path="res://Assets/robot.png" id="1_w6w4a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcq0c"]
+size = Vector2(12, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25bo2"]
+size = Vector2(13.5, 13.5)
+
+[sub_resource type="Animation" id="Animation_xmg3k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_vppde"]
+resource_name = "die"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_thndg"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_suifd"]
+_data = {
+"RESET": SubResource("Animation_xmg3k"),
+"die": SubResource("Animation_vppde"),
+"idle": SubResource("Animation_thndg")
+}
+
+[node name="robot" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_7vriw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("1_w6w4a")
+hframes = 2
+vframes = 2
+
+[node name="rescure" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rescure"]
+shape = SubResource("RectangleShape2D_fcq0c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+shape = SubResource("RectangleShape2D_25bo2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_suifd")
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="rescure" to="." method="_on_rescure_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
